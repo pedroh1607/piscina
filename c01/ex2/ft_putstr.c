@@ -12,18 +12,10 @@
 
 #include <stdio.h>
 
-void t_swap(int *a, int *b)
+void ft_putstr(char *str);
 {
-	int x;
-
-	x = a;	
-	*a = &b;
-	*b = &x;
 }
 
 int main ()
 {
-
-	t_swap(&a &b);
-	printf("a =  %d b = %d", a, b);
 }
