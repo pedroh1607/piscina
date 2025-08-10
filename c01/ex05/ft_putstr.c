@@ -9,13 +9,20 @@
 /*   Updated: 2025/08/05 16:15:27 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+//#include <unistd.h>
 
-#include <stdio.h>
-
-void ft_putstr(char *str);
+void ft_putstr(char *str)
 {
-}
+  int i;
 
-int main ()
-{
+  i = 0;
+  while (str[i] != '\0') {
+    write(1, &str[i], 1);
+    i++;
+  }
 }
+int main(void) 
+{ 
+  ft_putstr("Hello World!"); 
+}
+//trocar os espaços por tab
