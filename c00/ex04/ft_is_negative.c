@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 15:53:43 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/05 16:15:27 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/01 08:47:19 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/01 10:27:02 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_is_negative(int n)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (n < 0)
 	{
-		write(1, &str[i], 1);
-		i++;
+		write(1, "N", 1);
+	}
+	else
+	{
+		write(1, "P", 1);
 	}
 }
-
-int	main(void)
+/*
+int main(void)
 {
-	ft_putstr("Hello World!");
+	ft_is_negative(3);
 }
-
-//trocar os espaços por tab
+*/

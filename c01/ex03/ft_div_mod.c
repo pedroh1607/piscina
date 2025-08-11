@@ -16,7 +16,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*mod = a % b;
 	*div = a / b;
 }
-
+/*
 int	main(void)
 {
 	int	div;
@@ -25,3 +25,4 @@ int	main(void)
 	ft_div_mod(5, 2, &mod, &div);
 	printf("mod = %d \ndiv = %d", mod, div);
 }
+*/

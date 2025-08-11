@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 15:53:43 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/05 16:15:27 by pandrade         ###   ########.fr       */
+/*   Created: 2025/07/31 14:57:32 by pandrade          #+#    #+#             */
+/*   Updated: 2025/07/31 15:25:10 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	write(1, &c, 1);
 }
-
+/*
 int	main(void)
 {
-	ft_putstr("Hello World!");
+	ft_putchar('c');
 }
-
-//trocar os espaços por tab
+*/

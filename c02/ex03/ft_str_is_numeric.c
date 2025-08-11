@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 15:53:43 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/05 16:15:27 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/11 15:44:10 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/11 15:44:13 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+#include <stdio.h>
+int	ft_str_is_numeric(char *str)
 {
-	int	i;
-
+	int i;
+	int x;
+	
 	i = 0;
-	while (str[i] != '\0')
+	x = 1;
+	while(str[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		if (str[i] >= 0 && str[i] <= 9)
+		{
+			return ('x');
+			printf("0");
+		}
+		else
+		{
+			return (x);
+			printf("cle");
+		}
 		i++;
 	}
+	return 0;
 }
 
 int	main(void)
 {
-	ft_putstr("Hello World!");
-}
+	char	src[]= {1,2,3,4,5,6};
 
-//trocar os espaços por tab
+	
+	ft_str_is_numeric(src);
+	return 0;
+}

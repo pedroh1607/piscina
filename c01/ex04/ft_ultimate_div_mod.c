@@ -9,25 +9,27 @@
 /*   Updated: 2025/08/06 15:00:30 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <unistd.h>
 
-void  ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-  int c;
-  int d;
+	int	c;
+	int	d;
 
-  c = *a / *b;
-  d = *a % *b;
-  *a = c;
-  *b = d;  
+	c = *a / *b;
+	d = *a % *b;
+	*a = c;
+	*b = d;
 }
-int	main()
+/*
+int	main(void)
 {
-  int a;
-  int b;
-  
-  ft_ultimate_div_mod(10, 3);
-  printf("a: %d\nb: %d", a, b);
-  return 0;
-}
+	int	a;
+	int	b;
 	
+	a = 10;
+	b = 2;
+	ft_ultimate_div_mod(&a, &b);
+	printf("a: %i\nb: %i", a, b);
+}
+*/	

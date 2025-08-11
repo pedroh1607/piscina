@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 15:53:43 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/05 16:15:27 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/11 09:21:51 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/11 09:21:54 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
-
+	int i;
+	
 	i = 0;
-	while (str[i] != '\0')
+	while (src[i])
 	{
-		write(1, &str[i], 1);
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest); 
 }
-
-int	main(void)
+int main(void)
 {
-	ft_putstr("Hello World!");
+	char src[] = "oi";
+	char dest[50];
+	ft_strcpy(dest ,src);
+	printf("dest = %s",dest);
+	return 0;
 }
 
-//trocar os espaços por tab
