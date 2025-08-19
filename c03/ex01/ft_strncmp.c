@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 11:40:27 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/19 10:35:56 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/15 08:35:49 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/15 08:35:55 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
+	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	}
-	while(i < n)
-	{ 
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	if (i == n)
+		return (0);
+	return (s1[i] - s2[i]);
 }
 /*
-#include <stdio.h>
 int	main(void)
-{
-	char src[] = "opa";
-	unsigned int n = 2;
-	char dest[n];
-
-	ft_strncpy(dest, src, n);
-	printf("dest = %s\nsrc = %s\n", dest, src);
-}
-*/
+{	
+	int	x;
+	char	c[] = {"cAB"};
+	char	v[] = {"vABC"};
+	
+	x = 3;
+	printf("%d", ft_strncmp(c, v, x));	
+	
+}*/

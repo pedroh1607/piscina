@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 11:40:27 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/19 10:35:56 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/11 15:44:10 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/13 09:40:14 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_lowercase(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (!(str[i] >= 'a' && str[i] <= 'z'))
+		{			
+			return (0);
+		}
 		i++;
 	}
-	while(i < n)
-	{ 
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (1);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	char src[] = "opa";
-	unsigned int n = 2;
-	char dest[n];
 
-	ft_strncpy(dest, src, n);
-	printf("dest = %s\nsrc = %s\n", dest, src);
+	char	src[]={"cleiton"};
+	char	src1[]={"c/e1t0n"};
+	char	src2[]={"1234567"};
+	char	src3[]={"CLEITON"};
+	printf("%d\n%d\n%d\n%d\n",ft_str_is_lowercase(src),
+	ft_str_is_lowercase(src1),ft_str_is_lowercase(src2),
+	ft_str_is_lowercase(src3));	
 }
 */

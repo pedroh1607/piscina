@@ -22,10 +22,10 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_putstr("Hello World!");
 }
 
-//trocar os espaços por tab
+//trocar os espaços por tab*/

@@ -24,5 +24,5 @@ int	main(void)
 	ft_ft(&x);
 	printf("%d", x);
 	
-}
-*/
+
+}*/

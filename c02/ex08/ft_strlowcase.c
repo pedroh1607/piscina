@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 11:40:27 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/19 10:35:56 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/18 12:29:36 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/18 12:29:39 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strlowcase(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	while(i < n)
-	{ 
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (str);
 }
 /*
-#include <stdio.h>
-int	main(void)
+//#include <stdio.h>
+int	main(int argc, char *argv[])
 {
-	char src[] = "opa";
-	unsigned int n = 2;
-	char dest[n];
-
-	ft_strncpy(dest, src, n);
-	printf("dest = %s\nsrc = %s\n", dest, src);
+	(void)argc;
+	printf("%s", ft_strlowcase(argv[1]));
 }
 */

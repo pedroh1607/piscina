@@ -30,5 +30,4 @@ int	main(void)
 	b = 23;
 	ft_swap(&a, &b);
 	printf("valor_de_a = %i \nvalor_de_b = %i", a, b);
-}
-*/
+}*/

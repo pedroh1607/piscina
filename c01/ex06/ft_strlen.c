@@ -20,7 +20,6 @@ int	ft_strlen(char *str)
 	{
 		i++;
 	}
-	
 }
 /*
 int	main(void)

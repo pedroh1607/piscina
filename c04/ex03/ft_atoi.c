@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandrade <pandrade@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 11:40:27 by pandrade          #+#    #+#             */
-/*   Updated: 2025/08/19 10:35:56 by pandrade         ###   ########.fr       */
+/*   Created: 2025/08/19 09:29:32 by pandrade          #+#    #+#             */
+/*   Updated: 2025/08/19 10:03:08 by pandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while(i < n)
-	{ 
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-/*
 #include <stdio.h>
-int	main(void)
+int ft_atoi(char *str)
 {
-	char src[] = "opa";
-	unsigned int n = 2;
-	char dest[n];
-
-	ft_strncpy(dest, src, n);
-	printf("dest = %s\nsrc = %s\n", dest, src);
+	int	i;
+	int str_int;
+	//char str1;
+	
+	i = 0;
+	while (str[i])
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z') ||
+				(str[i] >= 'A' && str[i] >= 'Z'))
+		{
+			//str1 = str[i];
+			i++; 
+		}
+			str_int	= str[i] - '0';
+			str_int /= 10;
+		i++;
+	}
+	return (str_int);
 }
-*/
+
+int main(int c, char *v[])
+{
+	if (c != 2)
+		return (0);
+	printf("%d", ft_atoi(v[1]));
+	return (0);
+}

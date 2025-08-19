@@ -31,5 +31,4 @@ int	main(void)
 	b = 2;
 	ft_ultimate_div_mod(&a, &b);
 	printf("a: %i\nb: %i", a, b);
-}
-*/	
+}*/

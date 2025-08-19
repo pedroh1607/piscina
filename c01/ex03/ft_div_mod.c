@@ -24,5 +24,4 @@ int	main(void)
 
 	ft_div_mod(5, 2, &mod, &div);
 	printf("mod = %d \ndiv = %d", mod, div);
-}
-*/
+}*/
